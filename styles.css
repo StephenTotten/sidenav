@@ -1,0 +1,58 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styles for the sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.3s;
+}
+
+.sidebar h1 {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Style for submenu items */
+.sidebar .submenu ul {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.sidebar .submenu:hover ul {
+    display: block;
+}
+
+/* Style for links */
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Content area */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
