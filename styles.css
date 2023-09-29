@@ -1,58 +1,108 @@
 /* Reset some default styles */
-body, ul {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Basic styles for the sidebar */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for the sidebar */
 .sidebar {
-    width: 250px;
-    background-color: #333;
+    width: 70px; /* Initial width for the collapsed state */
+    background-color: #5050FE;
     color: #fff;
+    height: 100vh;
     position: fixed;
-    height: 100%;
-    overflow: hidden;
-    transition: width 0.3s;
-}
-
-.sidebar h1 {
+    top: 0;
+    left: 0;
+    overflow-y: auto;
     padding: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 0.3s ease; /* Transition for the width change */
 }
 
-.sidebar ul {
-    list-style-type: none;
+.sidebar:hover {
+    width: 250px; /* Expanded width on hover */
+}
+
+.sidebar nav ul {
+    list-style: none;
     padding: 0;
 }
 
-.sidebar ul li {
-    padding: 10px 0;
-    text-align: center;
+.sidebar nav ul li {
+    margin-bottom: 10px;
 }
 
-/* Style for submenu items */
-.sidebar .submenu ul {
-    display: none;
-    list-style-type: none;
-    padding-left: 20px;
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide text overflow */
 }
 
-.sidebar .submenu:hover ul {
+.sidebar nav ul li a .menu-title {
+    display: none; /* Initially hidden */
+}
+
+/* Styling for the expanded state */
+.sidebar:hover nav ul li a .menu-title {
+    display: inline; /* Display text on hover */
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #5050FE;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Font Awesome icons */
+.sidebar nav ul li i {
+    font-size: 24px;
+}
+
+/* Styling for the profile picture */
+.sidebar .profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+
+/* Styling for menu titles */
+.sidebar nav ul li a .menu-title {
+    display: none; /* Initially hidden */
+}
+
+/* Styling for the expanded state */
+.sidebar:hover nav ul li a .menu-title {
     display: block;
 }
 
-/* Style for links */
-.sidebar a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.sidebar a:hover {
-    text-decoration: underline;
-}
-
-/* Content area */
-.content {
-    margin-left: 250px;
+/* Styling for the main content area (adjust as needed) */
+main {
+    margin-left: 60px; /* Adjust for the collapsed width */
     padding: 20px;
+}
+
+/* Styling for submenus */
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px; /* Indent submenus */
+    margin: 0;
+}
+
+.menu-item.active .submenu {
+    display: block;
 }

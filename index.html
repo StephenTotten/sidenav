@@ -3,38 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4815061d4e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Vertical Sidebar</title>
+    <title>Vertical Navbar</title>
 </head>
 <body>
     <div class="sidebar">
-        <h1>Sidebar</h1>
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li class="submenu">
-                <a href="#">Menu 1</a>
-                <ul>
-                    <li><a href="#">Submenu 1.1</a></li>
-                    <li><a href="#">Submenu 1.2</a></li>
-                </ul>
-            </li>
-            <li class="submenu">
-                <a href="#">Menu 2</a>
-                <ul>
-                    <li><a href="#">Submenu 2.1</a></li>
-                    <li><a href="#">Submenu 2.2</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
+        <nav>
+            <ul>
+                <li class="menu-item">
+                    <a href="#" data-title="Home"><i class="fas fa-home"></i>Overview</a>
+                    <ul class="submenu">
+                        <li><a href="#">Submenu 1</a></li>
+                        <li><a href="#">Submenu 2</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#" data-title="Profile"><i class="fas fa-user"></i>Store</a>
+                    <ul class="submenu">
+                        <li><a href="#">Submenu 1</a></li>
+                        <li><a href="#">Submenu 2</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#" data-title="Messages"><i class="fas fa-envelope"></i>Emails</a>
+                    <ul class="submenu">
+                        <li><a href="#">Submenu 1</a></li>
+                        <li><a href="#">Submenu 2</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#" data-title="Notifications"><i class="fas fa-bell"></i>Reports</a>
+                    <ul class="submenu">
+                        <li><a href="#">Submenu 1</a></li>
+                        <li><a href="#">Submenu 2</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#" data-title="Settings"><i class="fas fa-cog"></i>Design</a>
+                    <ul class="submenu">
+                        <li><a href="#">Submenu 1</a></li>
+                        <li><a href="#">Submenu 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-title="Analytics"><i class="fas fa-chart-bar"></i>Discounts</a></li>
+                <li><a href="#" data-title="Calendar"><i class="fas fa-calendar"></i>Licenses</a></li>
+                <li><a href="#" data-title="Logout"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <img src="assets\profile.jpg" alt="Profile Picture">
+        </div>
     </div>
-    <div class="content">
-        <h2>Main Content</h2>
-        <p>Welcome to the main content of the page.</p>
-    </div>
+    <main>
+        <!-- Your main content goes here -->
+    </main>
+    <script src="index.js"></script>
 </body>
 </html>
